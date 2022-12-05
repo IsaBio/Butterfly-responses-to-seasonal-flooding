@@ -1,5 +1,3 @@
-# setwd("~/Documents/Biologia/Doutorado INPA/Tese/Manuscritos/Manuscrito cap1.2/AnaliseMS1.2/Analise_final_MS1.2.")
-
 # Legendre, P. (2014) Interpreting the replacement and richness difference 
 # components of beta diversity. Global Ecology and Biogeography, 23, xxx-xxx.
 # R function to compute the Podani- and Baselga-family decompositions of the 
