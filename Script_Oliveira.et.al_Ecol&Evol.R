@@ -1,4 +1,4 @@
-# "Seasonal flooding decreases fruit-feeding butterfly species dominance and increases spatial turnover in floodplain forests of central Amazonia" - Oliveira et al.
+# Oliveira, I.F., Baccaro, F.B., Werneck, F.P., Haugaasen, T. Seasonal flooding decreases fruit-feeding butterfly species dominance and increases spatial turnover in floodplain forests of central Amazonia. Manuscript submitted to Ecology and Evolution (2022).
 
 #
 library(ade4)
