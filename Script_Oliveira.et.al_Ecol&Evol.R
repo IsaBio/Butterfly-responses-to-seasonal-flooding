@@ -1,4 +1,4 @@
-# Oliveira, I.F., Baccaro, F.B., Werneck, F.P., Haugaasen, T. Seasonal flooding decreases fruit-feeding butterfly species dominance and increases spatial turnover in floodplain forests of central Amazonia. Manuscript submitted to Ecology and Evolution (2022).
+# Oliveira, I.F., Baccaro, F.B., Werneck, F.P., Haugaasen, T. Seasonal flooding decreases fruit-feeding butterfly species dominance and increases spatial turnover in floodplain forests of central Amazonia. Ecology and Evolution (2022).
 
 #
 library(ade4)
@@ -364,30 +364,30 @@ boot.div.comp<- function (x, n){
 beta_tf_cheia_zero <- as.matrix (beta_tf_cheia[rowSums(beta_tf_cheia[,-c(1:6)])!=0,-c(1:6)])
 beta_tf_seca_zero  <- as.matrix (beta_tf_seca[rowSums(beta_tf_seca[,-c(1:6)])!=0,-c(1:6)])
 
-boot.tf.high <- replicate(99, boot.div.comp(x = beta_tf_cheia_zero,
+boot.tf.high <- replicate(999, boot.div.comp(x = beta_tf_cheia_zero,
                                             n = round(nrow(beta_tf_cheia_zero)/2, 0)))
 
-boot.tf.low  <- replicate(99, boot.div.comp(x = beta_tf_seca_zero,
+boot.tf.low  <- replicate(999, boot.div.comp(x = beta_tf_seca_zero,
                                             n = round(nrow(beta_tf_seca_zero)/2, 0)))
 
 ### Bootstrap várzea ####
 beta_vz_cheia_zero <- as.matrix (beta_vz_cheia[rowSums(beta_vz_cheia[,-c(1:6)])!=0,-c(1:6)])
 beta_vz_seca_zero  <- as.matrix (beta_vz_seca[rowSums(beta_vz_seca[,-c(1:6)])!=0,-c(1:6)])
 
-boot.vz.high <- replicate(99, boot.div.comp(x = beta_vz_cheia_zero,
+boot.vz.high <- replicate(999, boot.div.comp(x = beta_vz_cheia_zero,
                                             n = round(nrow(beta_vz_cheia_zero)/2, 0)))
 
-boot.vz.low  <- replicate(99, boot.div.comp(x = beta_vz_seca_zero,
+boot.vz.low  <- replicate(999, boot.div.comp(x = beta_vz_seca_zero,
                                             n = round(nrow(beta_vz_seca_zero)/2, 0)))
 
 ## Bootstrap igapó ####
 beta_ig_cheia_zero <- as.matrix (beta_ig_cheia[rowSums(beta_ig_cheia[,-c(1:6)])!=0,-c(1:6)])
 beta_ig_seca_zero  <- as.matrix (beta_ig_seca[rowSums(beta_ig_seca[,-c(1:6)])!=0,-c(1:6)])
 
-boot.ig.high <- replicate(99, boot.div.comp(x = beta_ig_cheia_zero,
+boot.ig.high <- replicate(999, boot.div.comp(x = beta_ig_cheia_zero,
                                             n = round(nrow(beta_ig_cheia_zero)/2, 0)))
 
-boot.ig.low  <- replicate(99, boot.div.comp(x = beta_ig_seca_zero,
+boot.ig.low  <- replicate(999, boot.div.comp(x = beta_ig_seca_zero,
                                             n = round(nrow(beta_ig_seca_zero)/2, 0)))
 ### Plots ####
 # Table
@@ -478,57 +478,57 @@ ig_seca_canop <- subset(df_traps_strata, Habitat == "Igapo" & Season == "Dry" &
 tf_cheia_under_zero <- as.matrix (tf_cheia_under[rowSums(tf_cheia_under[,-c(1:7)])!=0,-c(1:7)])
 tf_seca_under_zero  <- as.matrix (tf_seca_under[rowSums(tf_seca_under[,-c(1:7)])!=0,-c(1:7)])
 
-boot.tf.high.under <- replicate(99, boot.div.comp(x = tf_cheia_under_zero,
+boot.tf.high.under <- replicate(999, boot.div.comp(x = tf_cheia_under_zero,
                                                   n = round(nrow(tf_cheia_under_zero)/2, 0)))
 
-boot.tf.low.under  <- replicate(99, boot.div.comp(x = tf_seca_under_zero,
+boot.tf.low.under  <- replicate(999, boot.div.comp(x = tf_seca_under_zero,
                                                   n = round(nrow(tf_seca_under_zero)/2, 0)))
 
 tf_cheia_canop_zero <- as.matrix (tf_cheia_canop[rowSums(tf_cheia_canop[,-c(1:7)])!=0,-c(1:7)])
 tf_seca_canop_zero  <- as.matrix (tf_seca_canop[rowSums(tf_seca_canop[,-c(1:7)])!=0,-c(1:7)])
 
-boot.tf.high.canop <- replicate(99, boot.div.comp(x = tf_cheia_canop_zero,
+boot.tf.high.canop <- replicate(999, boot.div.comp(x = tf_cheia_canop_zero,
                                                   n = round(nrow(tf_cheia_canop_zero)/2, 0)))
 
-boot.tf.low.canop  <- replicate(99, boot.div.comp(x = tf_seca_canop_zero,
+boot.tf.low.canop  <- replicate(999, boot.div.comp(x = tf_seca_canop_zero,
                                                   n = round(nrow(tf_seca_canop_zero)/2, 0)))
 
 ### Bootstrap Várzea ####
 vz_cheia_under_zero <- as.matrix (vz_cheia_under[rowSums(vz_cheia_under[,-c(1:7)])!=0,-c(1:7)])
 vz_seca_under_zero  <- as.matrix (vz_seca_under[rowSums(vz_seca_under[,-c(1:7)])!=0,-c(1:7)])
 
-boot.vz.high.under <- replicate(99, boot.div.comp(x = vz_cheia_under_zero,
+boot.vz.high.under <- replicate(999, boot.div.comp(x = vz_cheia_under_zero,
                                                   n = round(nrow(vz_cheia_under_zero)/2, 0)))
 
-boot.vz.low.under  <- replicate(99, boot.div.comp(x = vz_seca_under_zero,
+boot.vz.low.under  <- replicate(999, boot.div.comp(x = vz_seca_under_zero,
                                                   n = round(nrow(vz_seca_under_zero)/2, 0)))
 
 vz_cheia_canop_zero <- as.matrix (vz_cheia_canop[rowSums(vz_cheia_canop[,-c(1:7)])!=0,-c(1:7)])
 vz_seca_canop_zero  <- as.matrix (vz_seca_canop[rowSums(vz_seca_canop[,-c(1:7)])!=0,-c(1:7)])
 
-boot.vz.high.canop <- replicate(99, boot.div.comp(x = vz_cheia_canop_zero,
+boot.vz.high.canop <- replicate(999, boot.div.comp(x = vz_cheia_canop_zero,
                                                   n = round(nrow(vz_cheia_canop_zero)/2, 0)))
 
-boot.vz.low.canop  <- replicate(99, boot.div.comp(x = vz_seca_canop_zero,
+boot.vz.low.canop  <- replicate(999, boot.div.comp(x = vz_seca_canop_zero,
                                                   n = round(nrow(vz_seca_canop_zero)/2, 0)))
 
 ### Bootstrap Igapó ####
 ig_cheia_under_zero <- as.matrix (ig_cheia_under[rowSums(ig_cheia_under[,-c(1:7)])!=0,-c(1:7)])
 ig_seca_under_zero  <- as.matrix (ig_seca_under[rowSums(ig_seca_under[,-c(1:7)])!=0,-c(1:7)])
 
-boot.ig.high.under <- replicate(99, boot.div.comp(x = ig_cheia_under_zero,
+boot.ig.high.under <- replicate(999, boot.div.comp(x = ig_cheia_under_zero,
                                                   n = round(nrow(ig_cheia_under_zero)/2, 0)))
 
-boot.ig.low.under  <- replicate(99, boot.div.comp(x = ig_seca_under_zero,
+boot.ig.low.under  <- replicate(999, boot.div.comp(x = ig_seca_under_zero,
                                                   n = round(nrow(ig_seca_under_zero)/2, 0)))
 
 ig_cheia_canop_zero <- as.matrix (ig_cheia_canop[rowSums(ig_cheia_canop[,-c(1:7)])!=0,-c(1:7)])
 ig_seca_canop_zero  <- as.matrix (ig_seca_canop[rowSums(ig_seca_canop[,-c(1:7)])!=0,-c(1:7)])
 
-boot.ig.high.canop <- replicate(99, boot.div.comp(x = ig_cheia_canop_zero,
+boot.ig.high.canop <- replicate(999, boot.div.comp(x = ig_cheia_canop_zero,
                                                   n = round(nrow(ig_cheia_canop_zero)/2, 0)))
 
-boot.ig.low.canop  <- replicate(99, boot.div.comp(x = ig_seca_canop_zero,
+boot.ig.low.canop  <- replicate(999, boot.div.comp(x = ig_seca_canop_zero,
                                                   n = round(nrow(ig_seca_canop_zero)/2, 0)))
 
 ### Plots ####
